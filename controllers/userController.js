@@ -23,7 +23,7 @@ const signUp = async (req, res) => {
     const errors = validationResult(req)
     const data = req.body
     const { username, password, withdrawalPassword, inviteCode } = data
-    const inviteCodes = ['789yu45', 'uiw73u2', 'hsg572j']
+    const inviteCodes = ['789yu45', 'uiw83u2', 'hs9572j']
 
     if (!errors.isEmpty()) {
         return res.status(400).json({ message: errors.array() })
