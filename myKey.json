@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "semiotic-creek-401909",
+  "private_key_id": "1feb3d53cb0c5c49b539b2975ba923912aebb960",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZyPuhcsB+0hFo\nf/T/kRVHNXd3j1GxhyxtewqEOfdINIAmug/f2X9qYvXZNP2SHG/6XU4UY6z1yJIR\n6CQAhktkNpj453qwM/TlSRBIUvEsuR4M7/vNaNokRw0P/wvb2Xq8nruZuHKHk6bg\nDXCyvr2M8UyuFHzW6Y47XzWH8iqenC3O7QWtFFoThEtCiEk+uhwCtImWE/SKai66\ncGCh1N2P0Q2R1DK4cpFFwFYCFsw5NZi+wEB3n2dlJjDDwH0RGGNGnNY9oP9qGiGz\nd3id19Q+mjCdXfGTT6r9EMzx4zOg/Apnz+5VaXy4OhbFyLJPugFNClMIauarSpIH\nPObw2AFRAgMBAAECggEAAKSfy+uQVhXAWOFFSffz9zNueqq3mb6NuhJPD9lcsL4L\nDf6p9SQvFmxDE7eSL7e4I8J9PjZ5oiSL7fsUH1uptmjqQAY7u1PvR7oYZ9Z8v4Ov\nB4u46qkCDqqBGRQB+o3ADOAdDqsg08eS38chDGiDBmkyKEgLEQv/6usLtFmEamTV\n6GTGF/nHZwSjD41Vx64bI+FouuRGow4MdgYoplkrr4dhyw3LhfenihHW6KAdt1TO\nJrJ5HBQ7sRp9V1f+J330s+AhPzY0xLQ4AcxWYvwENIh39zfws6w2O3v0mVMGVGdr\naeKJVrAa2HcepsVWMDzkgOOd2WoXNYSezogNkhmMqQKBgQDy+yJGy3iAhpuB5Lov\nNigmbesiGulE+fojfZRke1Y5QzpSihfC0/rzDoLaeZ45LWjdDdXTIGHKeDPf65I8\n9gAOtS8p7nlkHAZl6pIPjr7CGxM69rZQOIHNGfJFWJtxblBxNaKIHdvdobYrgNdy\n5+TgE9tkZoMGHBKnrkXF7jA76QKBgQDldD9l+MyuzmViWj/ySiGRDvYgXO8nb+2R\n6YX36j8GJooRV7EXHOov6o/X7OfCwjQNlEWv8yWW5Qa/O7ps9Sed78c2FQu95JMB\nFghHI1OwatgeGd8rPxnD55x2gjRtiNytR6Fah0vMrAfjsncLFs7NZcheEHdJFx13\n+Q6DFr6BKQKBgQCT8SKSlkqdftfqQ7i1DDVwCJcU4evMCqQpvcl/ULVUEkHNhbUn\n8+ek294CZfBXgfWKOmVJsjq4i22SVh1pLqMkUV8RGdkhggrHPQaHoHM3PkL8MMEa\noP0vQzAG1wd2DiO+elimpf97t31yiXUkylrJsG1xeRUnwCn/nJVxCTCnGQKBgBBU\nTY68PhTSq3RsZ9CeZfUk029KLdropEeWDuqtyP5vD7RcQUYb0K7ISqRbP8Mkfv/Y\nZX04GJy8f9ZsMcA/UipzPgIjTUqeUbfqEXy+jt4nPGon/THes761ZPUqHwEMlGfg\niSMgLczLEWSq9r3bSaxkafYHxfV1p6s6FkZOABDBAoGATYFPVGULmXHUAyBOqKB2\nYk8tXnsgIOotmXxGxagH0UJRUKpdDF1c6Nw0PXgc00mGSBMJVhrciC6woZR64IbM\n2h37P6vsFIgWkLYv9Nj3D4GlRSNRJqT8yrkY7QRQtUFmQIXUUyGMRkDVAVJmKsVB\n1yC4/OvXMVGuh9J1a1WSfbM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "admin-746@semiotic-creek-401909.iam.gserviceaccount.com",
+  "client_id": "103410076610610218792",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/admin-746%40semiotic-creek-401909.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
