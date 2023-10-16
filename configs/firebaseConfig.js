@@ -7,13 +7,13 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyB4BfcZz-Nykor_k0B5HRkGQropfOWfWfc',
-  authDomain: 'semiotic-creek-401909.firebaseapp.com',
-  projectId: 'semiotic-creek-401909',
-  storageBucket: 'semiotic-creek-401909.appspot.com',
-  messagingSenderId: '305688997652',
-  appId: '1:305688997652:web:3ef52a9ee2e6df44db9c01',
-  measurementId: 'G-PPJRFPH3Z9',
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
