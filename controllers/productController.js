@@ -19,9 +19,7 @@ const createProduct = async (req, res) => {
     const storageRef = ref(Storage, `uploads/products/${image}`);
 
     // upload the product image to the database
-    const imageData = await uploadBytes(storageRef, req.file.buffer)
-      .then((data) => data)
-      .catch((error) => res.status(400).json({ message: error.message }));
+    await uploadBytes(storageRef, req.file.buffer);
 
     // get uploaded product image download url
     const downloadUrl = await getDownloadURL(storageRef);

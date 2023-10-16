@@ -3,8 +3,6 @@ const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-const fs = require('fs');
-const path = require('path');
 const {
   ref,
   uploadBytes,
@@ -121,49 +119,43 @@ const signIn = async (req, res) => {
 
 // updates the user avatar field
 const updateAvatar = async (req, res) => {
-  try {
-    const { id } = req.params;
+  const { id } = req.params;
 
+  try {
     // check if the provided id is valid
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: 'Invalid user ID' });
     }
 
-    const user = await User.findOne({ _id: id });
+    // find user by id
+    const user = await User.findById(id);
 
     // check if the user exists
-    if (!user) {
+    if (!user)
       return res.status(400).json({ message: 'No user exists with such ID .' });
-    }
 
-    // image file sent to the server
-    const image = req.file.originalname;
-
-    // firebase storage reference
-    const storageRef = ref(Storage, `uploads/avatars/${image}`);
-
-    // upload the image to firebase storage
-    const uploadedImage = await uploadBytes(storageRef, req.file.buffer)
-      .then((data) => data)
-      .catch((error) => res.status(error.message));
-
-    // get the uploaded image download url
-    const downloadUrl = await getDownloadURL(storageRef);
-
-    if (user.avatar) {
+    // check if the user avatar already exists
+    if (user.avatar && user.avatar.name) {
       const prevImageRef = ref(Storage, `uploads/avatars/${user.avatar.name}`);
       await deleteObject(prevImageRef);
     }
 
+    const image = req.file.originalname; // image file sent to the server
+    const storageRef = ref(Storage, `uploads/avatars/${image}`); // firebase storage reference
+
+    // upload the image to firebase storage
+    const uploadedImage = await uploadBytes(storageRef, req.file.buffer);
+
+    // get the uploaded image download url
+    const downloadUrl = await getDownloadURL(storageRef);
+
     // update the user avatar
-    const updateUser = await User.findByIdAndUpdate(
-      id,
-      { avatar: { name: uploadedImage.metadata.name, url: downloadUrl } },
-      { new: true }
-    );
+
+    user.avatar = { name: uploadedImage.metadata.name, url: downloadUrl };
+    await user.save();
 
     // remove sensitive user information
-    const { password, withdrawalPassword, ...userData } = updateUser.toObject();
+    const { password, withdrawalPassword, ...userData } = user.toObject();
 
     return res.status(200).json({ message: { ...userData } });
   } catch (error) {
